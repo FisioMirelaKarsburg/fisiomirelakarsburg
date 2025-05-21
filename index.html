@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisioterapia | Mirela Karsburg</title>
+  <style>
+    :root {
+      --roxo: #7d5a9e;
+      --nude: #f6e7d7;
+      --branco: #fff;
+      --cinza: #444;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--nude);
+      color: var(--cinza);
+    }
+    header {
+      background-color: var(--roxo);
+      color: var(--branco);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: var(--branco);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--roxo);
+    }
+    .servicos, .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .servico, .foto {
+      background: var(--branco);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .foto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: var(--roxo);
+      color: var(--branco);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .contato a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: var(--roxo);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    form {
+      background: var(--branco);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+    button {
+      background: var(--roxo);
+      color: var(--branco);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Mirela Karsburg</h2>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#publicacoes">Publicações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Saúde e Bem-estar com Fisioterapia Personalizada</h1>
+    <p>Atendimento humanizado com foco em resultados</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre a Profissional</h2>
+    <p>Mirela Karsburg é fisioterapeuta especializada em promover bem-estar e qualidade de vida. Com experiência, empatia e técnicas atualizadas, ela oferece um atendimento personalizado e eficaz.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="servicos">
+      <div class="servico">
+        <h3>RPG</h3>
+        <p>Reeducação postural global para alinhar o corpo.</p>
+      </div>
+      <div class="servico">
+        <h3>Pilates</h3>
+        <p>Exercícios terapêuticos para fortalecimento e mobilidade.</p>
+      </div>
+      <div class="servico">
+        <h3>Reabilitação</h3>
+        <p>Tratamento de dores e lesões com foco funcional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="galeria">
+      <div class="foto"><img src="foto1.jpg" alt="Foto do consultório"></div>
+      <div class="foto"><img src="foto2.jpg" alt="Tratamento"></div>
+      <div class="foto"><img src="foto3.jpg" alt="Equipamentos"></div>
+    </div>
+  </section>
+
+  <section id="publicacoes">
+    <h2>Publicações</h2>
+    <p>Breves textos ou artigos sobre temas de interesse para os pacientes. Pode incluir dicas, novidades ou informações importantes.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form action="https://formsubmit.co/miirelakarsburg@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+    <div class="contato">
+      <a href="https://wa.me/5599999999999" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/mirelakarsburg" target="_blank">Instagram</a>
+      <a href="https://maps.google.com" target="_blank">Localização</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mirela Karsburg - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
