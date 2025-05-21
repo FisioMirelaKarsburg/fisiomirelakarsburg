@@ -116,7 +116,9 @@
   </section>
 
   <section id="sobre">
-      <div class="foto"><img src="Mirela.jpeg" alt="Tratamento" width: auto; height: auto;></div>                    
+<div class="foto">
+  <img src="Mirela.jpeg" alt="Tratamento" style="width: 300px; height: auto; border-radius: 8px;">
+</div>                  
     <h2>Sobre a Profissional</h2>
     <p>Mirela Karsburg é fisioterapeuta especializada em promover bem-estar e qualidade de vida. Com experiência, empatia e técnicas atualizadas, ela oferece um atendimento personalizado e eficaz.</p>
   </section>
@@ -142,8 +144,6 @@
   <section id="galeria">
     <h2>Galeria</h2>
     <div class="galeria">
-      <div class="foto"><img src="Foto1.jpeg" alt="Tratamento"></div>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -202,10 +202,126 @@
 
 </body>
 </html>
-      
-      <div class="foto"><img src="Foto2.jpeg" alt="Tratamento"></div>
-      <div class="foto"><img src="Foto3.jpeg" alt="Equipamentos"></div>
+
+      <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagem Expansível</title>
+  <style>
+    .foto img {
+      width: 200px; /* Tamanho normal */
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-radius: 8px;
+    }
+
+    /* Fundo escuro e imagem centralizada */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagem clicável -->
+  <div class="foto">
+    <img src="Foto2.jpeg" alt="Tratamento" onclick="expandirImagem(this.src)">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+    <img id="imgExpandida" src="">
+  </div>
+
+  <script>
+    function expandirImagem(src) {
+      document.getElementById("imgExpandida").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function fecharLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
+
+        <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagem Expansível</title>
+  <style>
+    .foto img {
+      width: 200px; /* Tamanho normal */
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-radius: 8px;
+    }
+
+    /* Fundo escuro e imagem centralizada */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagem clicável -->
+  <div class="foto">
+    <img src="Foto3.jpeg" alt="Tratamento" onclick="expandirImagem(this.src)">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+    <img id="imgExpandida" src="">
+  </div>
+
+  <script>
+    function expandirImagem(src) {
+      document.getElementById("imgExpandida").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function fecharLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
     </div>
+    
   </section>
 
   <section id="publicacoes">
